@@ -1,4 +1,4 @@
-package com.videos.exercici;
+package com.videos.exceptions;
 
 import java.lang.Exception;
 

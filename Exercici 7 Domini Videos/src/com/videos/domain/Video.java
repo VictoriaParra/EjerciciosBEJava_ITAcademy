@@ -1,9 +1,11 @@
-package com.videos.exercici;
+package com.videos.domain;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JOptionPane;
+
+import com.videos.exceptions.EmptyFieldException;
 
 public class Video {
 
@@ -16,22 +18,84 @@ public class Video {
 
 	private List<String> tags = new ArrayList<String>();
 
+	// Constructores
+
+	public Video() {
+
+	}
+
+	/**
+	 * Constructor con parametros
+	 * 
+	 * @param mi_titulo titulo del video
+	 * @param mi_url    url del video
+	 * @param mi_tag    etiqueta del video
+	 * @throws EmptyFieldException
+	 */
 	public Video(String mi_titulo, String mi_url, String mi_tag) throws EmptyFieldException {
 
 		if (mi_url.isEmpty() || mi_titulo.isEmpty() || mi_tag.isEmpty()) {
 
 			throw new EmptyFieldException("Ha dejado un campo vacio");
 
+		} else {
+
+			url = mi_url;
+			title = mi_titulo;
+
+			tags.add(mi_tag);
 		}
-
-		url = mi_url;
-		title = mi_titulo;
-
-		tags.add(mi_tag);
 	}
 
-	
-	//Método para agregar más tags. Si hay campos vacios lanza un error.
+	// GETTERS Y SETTERS
+
+	/**
+	 * @return url del video
+	 */
+	public String getUrl() {
+		return url;
+	}
+
+	/**
+	 * @param url url del video
+	 */
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	/**
+	 * @return titulo del video
+	 */
+	public String getTitle() {
+		return title;
+	}
+
+	/**
+	 * @param title
+	 */
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	/**
+	 * @return lista de etiquetas
+	 */
+	public List<String> getTags() {
+		return tags;
+	}
+
+	/**
+	 * @param tags
+	 */
+	public void setTags(List<String> tags) {
+		this.tags = tags;
+	}
+
+	/**
+	 * Método para agregar más tags
+	 * 
+	 * @throws EmptyFieldException Si hay campos vacios
+	 */
 	public void addMoreTags() throws EmptyFieldException {
 
 		String mi_tag;

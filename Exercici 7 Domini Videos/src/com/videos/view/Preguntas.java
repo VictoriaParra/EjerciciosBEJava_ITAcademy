@@ -1,43 +1,41 @@
-package com.videos.exercici;
+package com.videos.view;
 
 import javax.swing.JOptionPane;
 
-public class Main_Videos {
+import com.videos.controller.UsuarioController;
+import com.videos.exceptions.EmptyFieldException;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+public class Preguntas {
 
-		/*
-		 * Un usuario puede crear nuevos vídeos y ver un listado de sus videos. Puedes
-		 * hacer uso de la clase Scanner o JoptionPane para interactuar con el usuario.
-		 */
+	/*
+	 * Clase para gestionar la interaccion con el usuario, que luego utilizara la
+	 * clase main.
+	 */
 
-		/*
-		 * La estructura no debe permitir añadir campos vacíos, en caso de que haya debe
-		 * devolver una excepción. Hs de hacer uso de java Exceptions.
-		 */
+	private static UsuarioController controller = new UsuarioController();
 
-		String questionCreateVideo;
-		String questionSeeList;
+	String questionCreateVideo;
+	String questionSeeList;
 
-		boolean isUserOk = false;
-		boolean isVideoCreated = true;
-		boolean isThereList = true;
+	boolean isUserCreated = false;
+	boolean isVideoCreated = true;
+	boolean isThereList = true;
 
-		Usuario user = null;
-		Video userVideo;
+	// Constructor
+	public Preguntas() {
 
-		// ---------------------------------------------------------------CREAR USUARIO
-		while (isUserOk == false) {
+	}
+
+	public void questionCreateUser() {
+
+		while (isUserCreated == false) {
 
 			try {
-
-				user = new Usuario(JOptionPane.showInputDialog("Introduzca su nombre"),
+				controller.createUsuario(JOptionPane.showInputDialog("Introduzca su nombre"),
 						JOptionPane.showInputDialog("Introduzca su apellido"),
 						JOptionPane.showInputDialog("Introduzca su contraseña"));
 
 			} catch (EmptyFieldException e) {
-
 				JOptionPane.showMessageDialog(null, "Ha dejado campos vacios. \nVuelva a cargar los datos.", "Alert",
 						JOptionPane.WARNING_MESSAGE);
 				continue;
@@ -50,13 +48,18 @@ public class Main_Videos {
 				continue;
 			}
 
-			isUserOk = true;
+			isUserCreated = true;
 
 		}
+	}
 
-		System.out.println(user.getUserData());
+	public void getDataUser() {
 
-		// -----------------------------------------------------------------CREAR VIDEO
+		System.out.println(controller.getUserData() + "\n");
+	}
+
+	public void questionCreateVideo() {
+
 		while (isVideoCreated == true) {
 
 			try {
@@ -67,11 +70,9 @@ public class Main_Videos {
 				case "si":
 
 					try {
-						userVideo = new Video(JOptionPane.showInputDialog("Introduce el titulo del video"),
+						controller.createVideo(JOptionPane.showInputDialog("Introduce el titulo del video"),
 								JOptionPane.showInputDialog("Introduce la URL del video"),
 								JOptionPane.showInputDialog("Introduzca un Tag"));
-
-						userVideo.addMoreTags(); // Para agregar mas tags a la lista.
 
 					} catch (EmptyFieldException e) {
 						JOptionPane.showMessageDialog(null, "Ha dejado campos vacios. \nVuelva a empezar, gracias.",
@@ -80,7 +81,6 @@ public class Main_Videos {
 						continue;
 					}
 
-					user.addVideo(userVideo); // se agrega el video a la lista de videos del usuario.
 					break;
 
 				case "no":
@@ -101,7 +101,10 @@ public class Main_Videos {
 
 		}
 
-		// -----------------------------------------------------------------VER LISTADO
+	}
+
+	public void questionGetList() {
+
 		while (isThereList == true) {
 
 			try {
@@ -111,7 +114,7 @@ public class Main_Videos {
 				if (questionSeeList.equalsIgnoreCase("si")) {
 					try {
 
-						user.printVideosList();// se imprime en consola el listado.
+						controller.printVideosList();// se imprime en consola el listado.
 
 					} catch (EmptyFieldException exc) {
 						JOptionPane.showMessageDialog(null,
@@ -138,4 +141,5 @@ public class Main_Videos {
 
 		}
 	}
+
 }
