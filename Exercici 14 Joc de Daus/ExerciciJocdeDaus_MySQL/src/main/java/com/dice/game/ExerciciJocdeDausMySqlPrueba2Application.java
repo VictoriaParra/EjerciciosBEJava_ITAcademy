@@ -1,0 +1,13 @@
+package com.dice.game;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ExerciciJocdeDausMySqlPrueba2Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ExerciciJocdeDausMySqlPrueba2Application.class, args);
+	}
+
+}

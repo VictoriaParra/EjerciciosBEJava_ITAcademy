@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "903157c2-41d5-4472-8074-5b6201f8a17c",
+		"name": "Collection_Dice_Game",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get - players ranking",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2aWNreSIsImV4cCI6MTYwNTc5MzMwMn0.gyEtJ5y__eGxqI8s20b9eJRmPK3JUVKZAW89du8lwzlzI-4TFrGJQw8IPw47XI0irE47IeOH4Un6UW8mM306rA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8181/api/players/ranking",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"api",
+						"players",
+						"ranking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get - players con su  porcentaje de exito",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2aWNreSIsImV4cCI6MTYwNTc5MzMwMn0.gyEtJ5y__eGxqI8s20b9eJRmPK3JUVKZAW89du8lwzlzI-4TFrGJQw8IPw47XI0irE47IeOH4Un6UW8mM306rA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8181/api/players",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"api",
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get - jugador con peor porcentaje de exito",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2aWNreSIsImV4cCI6MTYwNTc5MzMwMn0.gyEtJ5y__eGxqI8s20b9eJRmPK3JUVKZAW89du8lwzlzI-4TFrGJQw8IPw47XI0irE47IeOH4Un6UW8mM306rA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8181/api/players/ranking/loser",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"api",
+						"players",
+						"ranking",
+						"loser"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get - jugador con mejorporcentaje de exito",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2aWNreSIsImV4cCI6MTYwNTc5MzMwMn0.gyEtJ5y__eGxqI8s20b9eJRmPK3JUVKZAW89du8lwzlzI-4TFrGJQw8IPw47XI0irE47IeOH4Un6UW8mM306rA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8181/api/players/ranking/winner",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"api",
+						"players",
+						"ranking",
+						"winner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get - Listado de partidas del jugador",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2aWNreSIsImV4cCI6MTYwNTc5MzMwMn0.gyEtJ5y__eGxqI8s20b9eJRmPK3JUVKZAW89du8lwzlzI-4TFrGJQw8IPw47XI0irE47IeOH4Un6UW8mM306rA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8181/api/players/1/games",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"api",
+						"players",
+						"1",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete - Eliminar listado de partidas del jugador",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2aWNreSIsImV4cCI6MTYwNTc5MzMwMn0.gyEtJ5y__eGxqI8s20b9eJRmPK3JUVKZAW89du8lwzlzI-4TFrGJQw8IPw47XI0irE47IeOH4Un6UW8mM306rA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8181/api/players/4/games",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"api",
+						"players",
+						"4",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post- Partida jugador",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2aWNreSIsImV4cCI6MTYwNTc5MzMwMn0.gyEtJ5y__eGxqI8s20b9eJRmPK3JUVKZAW89du8lwzlzI-4TFrGJQw8IPw47XI0irE47IeOH4Un6UW8mM306rA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8181/api/players/4/games",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"api",
+						"players",
+						"4",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post- Jugador",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2aWNreSIsImV4cCI6MTYwNTc5MzcyM30.JagR5QpQHec-mrX34_0ajBBV3Goc7pH9tvMsH3QJp8Mh9wUUwlvGCedcsS0v5_UrJVr_nf1_MFAzaqo8S2NY6Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"valeria\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/api/players",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"api",
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put- Cambio de nombre jugador",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2aWNreSIsImV4cCI6MTYwNTc5MzcyM30.JagR5QpQHec-mrX34_0ajBBV3Goc7pH9tvMsH3QJp8Mh9wUUwlvGCedcsS0v5_UrJVr_nf1_MFAzaqo8S2NY6Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sol\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/api/players/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"api",
+						"players",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN (get token)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"vicky\", \"password\":\"asd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

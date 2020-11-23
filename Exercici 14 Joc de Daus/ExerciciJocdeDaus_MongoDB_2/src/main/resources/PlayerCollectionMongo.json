@@ -1,0 +1,129 @@
+[{
+  "_id": {
+    "$oid": "5fbbc888fe074e79e738b67b"
+  },
+  "name": "MARCOS",
+  "registration_date": {
+    "$date": "2020-11-23T14:34:48.122Z"
+  },
+  "successRate": 20,
+  "game": [
+    {
+      "dice1": 2,
+      "dice2": 4,
+      "gameResult": "LOSE"
+    },
+    {
+      "dice1": 4,
+      "dice2": 5,
+      "gameResult": "LOSE"
+    },
+    {
+      "dice1": 1,
+      "dice2": 5,
+      "gameResult": "LOSE"
+    },
+    {
+      "dice1": 2,
+      "dice2": 5,
+      "gameResult": "WIN"
+    },
+    {
+      "dice1": 5,
+      "dice2": 4,
+      "gameResult": "LOSE"
+    }
+  ],
+  "_class": "com.dice.game.dto.Player"
+},{
+  "_id": {
+    "$oid": "5fbbc909fe074e79e738b67c"
+  },
+  "name": "LUCA",
+  "registration_date": {
+    "$date": "2020-11-23T14:36:57.810Z"
+  },
+  "successRate": 50,
+  "game": [
+    {
+      "dice1": 2,
+      "dice2": 2,
+      "gameResult": "LOSE"
+    },
+    {
+      "dice1": 3,
+      "dice2": 4,
+      "gameResult": "WIN"
+    }
+  ],
+  "_class": "com.dice.game.dto.Player"
+},{
+  "_id": {
+    "$oid": "5fbbc91ffe074e79e738b67d"
+  },
+  "name": "ANONIMO",
+  "registration_date": {
+    "$date": "2020-11-23T14:37:19.471Z"
+  },
+  "successRate": 16,
+  "game": [
+    {
+      "dice1": 2,
+      "dice2": 1,
+      "gameResult": "LOSE"
+    },
+    {
+      "dice1": 4,
+      "dice2": 1,
+      "gameResult": "LOSE"
+    },
+    {
+      "dice1": 2,
+      "dice2": 3,
+      "gameResult": "LOSE"
+    },
+    {
+      "dice1": 2,
+      "dice2": 4,
+      "gameResult": "LOSE"
+    },
+    {
+      "dice1": 1,
+      "dice2": 2,
+      "gameResult": "LOSE"
+    },
+    {
+      "dice1": 5,
+      "dice2": 2,
+      "gameResult": "WIN"
+    }
+  ],
+  "_class": "com.dice.game.dto.Player"
+},{
+  "_id": {
+    "$oid": "5fbbc93bfe074e79e738b67e"
+  },
+  "name": "CAROLINA",
+  "registration_date": {
+    "$date": "2020-11-23T14:37:47.866Z"
+  },
+  "successRate": 66,
+  "game": [
+    {
+      "dice1": 1,
+      "dice2": 4,
+      "gameResult": "LOSE"
+    },
+    {
+      "dice1": 2,
+      "dice2": 5,
+      "gameResult": "WIN"
+    },
+    {
+      "dice1": 5,
+      "dice2": 2,
+      "gameResult": "WIN"
+    }
+  ],
+  "_class": "com.dice.game.dto.Player"
+}]
